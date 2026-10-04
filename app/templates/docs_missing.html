@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block title %}生词表未生成 · RootVocab{% endblock %}
+{% block content %}
+
+<div class="empty-state wide">
+  <div class="empty-emoji">📄</div>
+  <h3>还没有生成静态生词表</h3>
+  <p>先用导出脚本生成，再到这里预览（也可直接发布到 GitHub Pages）。</p>
+  <pre class="cmd-block">.venv/bin/python scripts/export_unknown.py --user {{ current_user }}</pre>
+  <p class="hint">
+    生成位置：<code>{{ docs_dir }}/index.html</code><br>
+    常用参数：<code>--user 用户名</code>、<code>--exam ielts|toefl</code>、<code>--sort freq</code>、<code>--format txt</code>
+  </p>
+  {% if error %}<p class="hint error">生成失败：{{ error }}</p>{% endif %}
+  <div class="empty-actions">
+    <button type="button" class="btn-primary" data-export>一键生成</button>
+    <a href="{{ url_for('main.words', exam=exam) }}" class="btn-ghost">返回单词列表</a>
+  </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,64 @@
+{% extends "base.html" %}
+{% block content %}
+
+<section class="section-head">
+  <div>
+    <h2>生词本 · 复习</h2>
+    <p>这里只列出被你标记为「不认识」或「学习中」的词。掌握后点一下即可移出。</p>
+  </div>
+  <div class="stat-chips">
+    <a href="{{ url_for('main.words', exam=exam, status='unknown') }}"
+       class="chip chip-unknown" title="只看「不认识」的词">不认识 {{ stats.unknown }}</a>
+    <a href="{{ url_for('main.words', exam=exam, status='learning') }}"
+       class="chip chip-learning" title="只看「学习中」的词">学习中 {{ stats.learning }}</a>
+  </div>
+</section>
+
+{% if words %}
+  <div class="review-grid">
+    {% for w in words %}
+      <div class="flip-card status-{{ w.status }}" data-wordid="{{ w.wordid }}" tabindex="0">
+        <div class="flip-inner">
+          <div class="flip-front">
+            <span class="status-corner"><i class="dot dot-{{ w.status }}"></i>{{ {'unknown':'不认识','learning':'学习中'}[w.status] }}</span>
+            <h3>{{ w.spelling }}</h3>
+            <div class="phonetic">
+              {% if w.uk_phonetic %}<span>英 <b>/{{ w.uk_phonetic }}/</b></span>{% endif %}
+              {% if w.us_phonetic %}<span>美 <b>/{{ w.us_phonetic }}/</b></span>{% endif %}
+            </div>
+            <p class="flip-hint">点卡片翻面看释义</p>
+            {% if w.root_name %}<span class="root-hint">{{ w.root_name }} · {{ w.root_meaning }}</span>{% endif %}
+          </div>
+          <div class="flip-back">
+            <h4>{{ w.spelling }}</h4>
+            {% if w.pos %}<span class="pos-tag">{{ w.pos }}</span>{% endif %}
+            <p class="meaning">{{ w.meaning }}</p>
+            {% for ex in sample_examples.get(w.wordid, []) %}
+              <p class="ex-en small">{{ ex.en|highlight(w.spelling)|safe }}</p>
+              {% if ex.cn %}<p class="ex-cn small">{{ ex.cn }}</p>{% endif %}
+            {% endfor %}
+            <div class="flip-actions">
+              <div class="status-group" data-wordid="{{ w.wordid }}">
+                <button class="status-opt status-opt-unknown {{ 'on' if w.status == 'unknown' }}"
+                        data-set="{{ w.wordid }}" data-status="unknown">不认识</button>
+                <button class="status-opt status-opt-learning {{ 'on' if w.status == 'learning' }}"
+                        data-set="{{ w.wordid }}" data-status="learning">学习中</button>
+                <button class="status-opt status-opt-mastered {{ 'on' if w.status == 'mastered' }}"
+                        data-set="{{ w.wordid }}" data-status="mastered">已掌握</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+{% else %}
+  <div class="empty-state wide">
+    <div class="empty-emoji">🎉</div>
+    <h3>生词本是空的</h3>
+    <p>去单词列表页把记不住的词标记为「不认识」，它们就会出现在这里。</p>
+    <a href="{{ url_for('main.words', exam=exam) }}" class="btn-primary">去背单词</a>
+  </div>
+{% endif %}
+
+{% endblock %}

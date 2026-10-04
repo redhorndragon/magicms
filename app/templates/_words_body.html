@@ -1,0 +1,87 @@
+{# 列表页右侧内容片段（上下文卡 + 筛选条 + 单词网格 + 分页）。
+
+   两种用途：
+   1. 整页渲染时由 words.html 通过 include 引入；
+   2. 点击左侧词根 / 筛选 / 翻页时，/words?partial=1 单独返回本片段，
+      前端只替换 .content-col —— 左侧词根列表的 DOM 不重建，
+      因此它的滚动位置与分组展开状态得以保留。
+#}
+
+<div class="context-bar">
+  {% if current_root %}
+    <div class="context-card">
+      <div class="context-title">
+        <h2>{{ current_root.root }}</h2>
+        <span class="type-pill">{{ {'root':'词根','prefix':'前缀','suffix':'后缀'}[current_root.type] }}</span>
+      </div>
+      <p>{{ current_root.meaning }} · 来自{{ current_root.origin|origin_label }}</p>
+      {% if variants %}<p class="variants">常见变体：{{ variants|join(' · ') }}</p>{% endif %}
+    </div>
+  {% elif root == 'none' %}
+    <div class="context-card">
+      <div class="context-title"><h2>未归类单词</h2><span class="type-pill">其他</span></div>
+      <p>这些词未被规则匹配到已知词根，多为基础词或复合词</p>
+    </div>
+  {% else %}
+    <div class="context-card">
+      <div class="context-title"><h2>全部单词</h2></div>
+      <p>共 {{ total }} 个词条{% if q %}，搜索「{{ q }}」{% endif %}</p>
+    </div>
+  {% endif %}
+
+  <div class="filter-bar">
+    {% for f in status_filters %}
+      <a href="{{ url_for('main.words', exam=exam, root=root, status=f.key, sort=sort, q=q) }}"
+         class="pill {{ 'active' if status==f.key }}" data-nav="words">{{ f.label }}</a>
+    {% endfor %}
+  </div>
+  <div class="filter-bar">
+    {% for s in sort_filters %}
+      <a href="{{ url_for('main.words', exam=exam, root=root, status=status, sort=s.key, q=q) }}"
+         class="pill pill-soft {{ 'active' if sort==s.key }}" data-nav="words">{{ s.label }}</a>
+    {% endfor %}
+  </div>
+</div>
+
+<div class="word-grid">
+  {% for w in words %}
+    <article class="word-card status-{{ w.status }}" data-wordid="{{ w.wordid }}">
+      <div class="word-top">
+        <a href="{{ url_for('main.word_detail', wordid=w.wordid, exam=exam) }}" class="word-spell">{{ w.spelling }}</a>
+        <button class="star-btn {{ 'on' if w.starred }}" data-star="{{ w.wordid }}" title="收藏">★</button>
+      </div>
+      <div class="phonetic">
+        {% if w.uk_phonetic %}<span>英 <b>/{{ w.uk_phonetic }}/</b></span>{% endif %}
+        {% if w.us_phonetic %}<span>美 <b>/{{ w.us_phonetic }}/</b></span>{% endif %}
+      </div>
+      {% if w.pos %}<span class="pos-tag">{{ w.pos }}</span>{% endif %}
+      <p class="meaning">{{ w.meaning }}</p>
+      <div class="card-foot">
+        <div class="status-group" data-wordid="{{ w.wordid }}">
+          <button class="status-opt status-opt-unknown {{ 'on' if w.status == 'unknown' }}"
+                  data-set="{{ w.wordid }}" data-status="unknown">不认识</button>
+          <button class="status-opt status-opt-learning {{ 'on' if w.status == 'learning' }}"
+                  data-set="{{ w.wordid }}" data-status="learning">学习中</button>
+          <button class="status-opt status-opt-mastered {{ 'on' if w.status == 'mastered' }}"
+                  data-set="{{ w.wordid }}" data-status="mastered">已掌握</button>
+        </div>
+        {% if w.example_count %}<span class="ex-flag">{{ w.example_count }} 例句</span>{% endif %}
+      </div>
+    </article>
+  {% else %}
+    <div class="empty-state wide">
+      <div class="empty-emoji">∅</div>
+      <h3>没有匹配的单词</h3>
+      <p>换个筛选条件或关键词试试</p>
+    </div>
+  {% endfor %}
+</div>
+
+{% if pages > 1 %}
+  <div class="pager">
+    {% set kwargs = dict(exam=exam, root=root, status=status, sort=sort, q=q) %}
+    {% if page > 1 %}<a href="{{ url_for('main.words', page=page-1, **kwargs) }}" class="pill" data-nav="words">上一页</a>{% endif %}
+    <span class="pager-info">第 {{ page }} / {{ pages }} 页 · 共 {{ total }} 词</span>
+    {% if page < pages %}<a href="{{ url_for('main.words', page=page+1, **kwargs) }}" class="pill" data-nav="words">下一页</a>{% endif %}
+  </div>
+{% endif %}

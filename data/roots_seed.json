@@ -1,0 +1,2692 @@
+[
+  {
+    "root": "ab-",
+    "type": "prefix",
+    "meaning": "离开、相反、从…出",
+    "origin": "latin",
+    "variants": [
+      "ab",
+      "abs"
+    ]
+  },
+  {
+    "root": "ad-",
+    "type": "prefix",
+    "meaning": "朝向、附加、加强",
+    "origin": "latin",
+    "variants": [
+      "ad",
+      "acc",
+      "add",
+      "aff",
+      "agg",
+      "all",
+      "app",
+      "arr",
+      "ass",
+      "att",
+      "acq"
+    ]
+  },
+  {
+    "root": "ambi-",
+    "type": "prefix",
+    "meaning": "两者、周围",
+    "origin": "latin",
+    "variants": [
+      "ambi",
+      "amphi"
+    ]
+  },
+  {
+    "root": "ana-",
+    "type": "prefix",
+    "meaning": "向上、回溯、再",
+    "origin": "greek",
+    "variants": [
+      "ana"
+    ]
+  },
+  {
+    "root": "ante-",
+    "type": "prefix",
+    "meaning": "在…之前",
+    "origin": "latin",
+    "variants": [
+      "ante"
+    ]
+  },
+  {
+    "root": "anti-",
+    "type": "prefix",
+    "meaning": "反对、对抗",
+    "origin": "greek",
+    "variants": [
+      "anti"
+    ]
+  },
+  {
+    "root": "auto-",
+    "type": "prefix",
+    "meaning": "自己、自动",
+    "origin": "greek",
+    "variants": [
+      "auto",
+      "auth"
+    ]
+  },
+  {
+    "root": "bi-",
+    "type": "prefix",
+    "meaning": "二、两次",
+    "origin": "latin",
+    "variants": [
+      "bin"
+    ]
+  },
+  {
+    "root": "bio-",
+    "type": "prefix",
+    "meaning": "生命、生物",
+    "origin": "greek",
+    "variants": [
+      "bio"
+    ]
+  },
+  {
+    "root": "cata-",
+    "type": "prefix",
+    "meaning": "向下、彻底",
+    "origin": "greek",
+    "variants": [
+      "cata",
+      "cath"
+    ]
+  },
+  {
+    "root": "circum-",
+    "type": "prefix",
+    "meaning": "环绕、周围",
+    "origin": "latin",
+    "variants": [
+      "circum",
+      "circu"
+    ]
+  },
+  {
+    "root": "con-",
+    "type": "prefix",
+    "meaning": "共同、一起、加强",
+    "origin": "latin",
+    "variants": [
+      "com",
+      "con",
+      "col",
+      "cor"
+    ]
+  },
+  {
+    "root": "contra-",
+    "type": "prefix",
+    "meaning": "相反、对立",
+    "origin": "latin",
+    "variants": [
+      "contra",
+      "contro",
+      "counter"
+    ]
+  },
+  {
+    "root": "de-",
+    "type": "prefix",
+    "meaning": "向下、去除、否定",
+    "origin": "latin",
+    "variants": [
+      "de"
+    ]
+  },
+  {
+    "root": "demi-",
+    "type": "prefix",
+    "meaning": "半",
+    "origin": "latin",
+    "variants": [
+      "demi",
+      "semi",
+      "hemi"
+    ]
+  },
+  {
+    "root": "dia-",
+    "type": "prefix",
+    "meaning": "穿过、两者之间",
+    "origin": "greek",
+    "variants": [
+      "dia"
+    ]
+  },
+  {
+    "root": "dis-",
+    "type": "prefix",
+    "meaning": "分开、否定、去除",
+    "origin": "latin",
+    "variants": [
+      "dis",
+      "dif"
+    ]
+  },
+  {
+    "root": "dys-",
+    "type": "prefix",
+    "meaning": "坏、困难、异常",
+    "origin": "greek",
+    "variants": [
+      "dys"
+    ]
+  },
+  {
+    "root": "en-",
+    "type": "prefix",
+    "meaning": "使…、进入",
+    "origin": "greek",
+    "variants": [
+      "en",
+      "em"
+    ]
+  },
+  {
+    "root": "epi-",
+    "type": "prefix",
+    "meaning": "在…之上、之后",
+    "origin": "greek",
+    "variants": [
+      "epi"
+    ]
+  },
+  {
+    "root": "eu-",
+    "type": "prefix",
+    "meaning": "好、优美",
+    "origin": "greek",
+    "variants": [
+      "eu"
+    ]
+  },
+  {
+    "root": "ex-",
+    "type": "prefix",
+    "meaning": "向外、出、 former",
+    "origin": "latin",
+    "variants": [
+      "ex",
+      "ef",
+      "es"
+    ]
+  },
+  {
+    "root": "extra-",
+    "type": "prefix",
+    "meaning": "超出、之外",
+    "origin": "latin",
+    "variants": [
+      "extra",
+      "extro",
+      "exter"
+    ]
+  },
+  {
+    "root": "fore-",
+    "type": "prefix",
+    "meaning": "在前面、预先",
+    "origin": "old-english",
+    "variants": [
+      "fore"
+    ]
+  },
+  {
+    "root": "hetero-",
+    "type": "prefix",
+    "meaning": "不同、相异",
+    "origin": "greek",
+    "variants": [
+      "hetero"
+    ]
+  },
+  {
+    "root": "homo-",
+    "type": "prefix",
+    "meaning": "相同、同类",
+    "origin": "greek",
+    "variants": [
+      "homo"
+    ]
+  },
+  {
+    "root": "hyper-",
+    "type": "prefix",
+    "meaning": "超过、过度",
+    "origin": "greek",
+    "variants": [
+      "hyper"
+    ]
+  },
+  {
+    "root": "hypo-",
+    "type": "prefix",
+    "meaning": "低于、不足",
+    "origin": "greek",
+    "variants": [
+      "hypo"
+    ]
+  },
+  {
+    "root": "in-",
+    "type": "prefix",
+    "meaning": "否定；或向内、进入",
+    "origin": "latin",
+    "variants": [
+      "il",
+      "im",
+      "ir"
+    ]
+  },
+  {
+    "root": "inter-",
+    "type": "prefix",
+    "meaning": "在…之间、相互",
+    "origin": "latin",
+    "variants": [
+      "inter",
+      "intel"
+    ]
+  },
+  {
+    "root": "intra-",
+    "type": "prefix",
+    "meaning": "在内、内部",
+    "origin": "latin",
+    "variants": [
+      "intra",
+      "intro"
+    ]
+  },
+  {
+    "root": "macro-",
+    "type": "prefix",
+    "meaning": "大、宏观",
+    "origin": "greek",
+    "variants": [
+      "macro"
+    ]
+  },
+  {
+    "root": "mal-",
+    "type": "prefix",
+    "meaning": "坏、恶、不良",
+    "origin": "latin",
+    "variants": [
+      "mal",
+      "male"
+    ]
+  },
+  {
+    "root": "mega-",
+    "type": "prefix",
+    "meaning": "巨大、百万",
+    "origin": "greek",
+    "variants": [
+      "mega",
+      "megal"
+    ]
+  },
+  {
+    "root": "meta-",
+    "type": "prefix",
+    "meaning": "变化、超越、之后",
+    "origin": "greek",
+    "variants": [
+      "meta",
+      "met"
+    ]
+  },
+  {
+    "root": "micro-",
+    "type": "prefix",
+    "meaning": "小、微观",
+    "origin": "greek",
+    "variants": [
+      "micro",
+      "micr"
+    ]
+  },
+  {
+    "root": "mis-",
+    "type": "prefix",
+    "meaning": "错误、坏、不当",
+    "origin": "old-english",
+    "variants": [
+      "mis"
+    ]
+  },
+  {
+    "root": "mono-",
+    "type": "prefix",
+    "meaning": "单一、独自",
+    "origin": "greek",
+    "variants": [
+      "mono",
+      "mon"
+    ]
+  },
+  {
+    "root": "multi-",
+    "type": "prefix",
+    "meaning": "多、多重",
+    "origin": "latin",
+    "variants": [
+      "multi",
+      "mult"
+    ]
+  },
+  {
+    "root": "neo-",
+    "type": "prefix",
+    "meaning": "新",
+    "origin": "greek",
+    "variants": [
+      "neo"
+    ]
+  },
+  {
+    "root": "non-",
+    "type": "prefix",
+    "meaning": "非、不",
+    "origin": "latin",
+    "variants": [
+      "non"
+    ]
+  },
+  {
+    "root": "ob-",
+    "type": "prefix",
+    "meaning": "朝向、对抗、掩盖",
+    "origin": "latin",
+    "variants": [
+      "ob",
+      "op",
+      "of"
+    ]
+  },
+  {
+    "root": "omni-",
+    "type": "prefix",
+    "meaning": "全部、全",
+    "origin": "latin",
+    "variants": [
+      "omni"
+    ]
+  },
+  {
+    "root": "out-",
+    "type": "prefix",
+    "meaning": "超出、胜过",
+    "origin": "old-english",
+    "variants": [
+      "out"
+    ]
+  },
+  {
+    "root": "over-",
+    "type": "prefix",
+    "meaning": "过度、在上方",
+    "origin": "old-english",
+    "variants": [
+      "over"
+    ]
+  },
+  {
+    "root": "pan-",
+    "type": "prefix",
+    "meaning": "全部、泛",
+    "origin": "greek",
+    "variants": [
+      "panto",
+      "pan"
+    ]
+  },
+  {
+    "root": "para-",
+    "type": "prefix",
+    "meaning": "并列、辅助、防",
+    "origin": "greek",
+    "variants": [
+      "para",
+      "par"
+    ]
+  },
+  {
+    "root": "per-",
+    "type": "prefix",
+    "meaning": "贯穿、完全",
+    "origin": "latin",
+    "variants": [
+      "per"
+    ]
+  },
+  {
+    "root": "peri-",
+    "type": "prefix",
+    "meaning": "周围、环绕",
+    "origin": "greek",
+    "variants": [
+      "peri"
+    ]
+  },
+  {
+    "root": "poly-",
+    "type": "prefix",
+    "meaning": "多、众",
+    "origin": "greek",
+    "variants": [
+      "poly"
+    ]
+  },
+  {
+    "root": "post-",
+    "type": "prefix",
+    "meaning": "在…之后",
+    "origin": "latin",
+    "variants": [
+      "post"
+    ]
+  },
+  {
+    "root": "pre-",
+    "type": "prefix",
+    "meaning": "在…之前、预先",
+    "origin": "latin",
+    "variants": [
+      "pre"
+    ]
+  },
+  {
+    "root": "pro-",
+    "type": "prefix",
+    "meaning": "向前、赞同、代理",
+    "origin": "latin",
+    "variants": [
+      "pro",
+      "pur"
+    ]
+  },
+  {
+    "root": "re-",
+    "type": "prefix",
+    "meaning": "回、再、反复",
+    "origin": "latin",
+    "variants": [
+      "re",
+      "red"
+    ]
+  },
+  {
+    "root": "retro-",
+    "type": "prefix",
+    "meaning": "向后、回溯",
+    "origin": "latin",
+    "variants": [
+      "retro"
+    ]
+  },
+  {
+    "root": "sub-",
+    "type": "prefix",
+    "meaning": "在下面、次要、副",
+    "origin": "latin",
+    "variants": [
+      "sub",
+      "suc",
+      "suf",
+      "sug",
+      "sup",
+      "sur",
+      "sus"
+    ]
+  },
+  {
+    "root": "super-",
+    "type": "prefix",
+    "meaning": "在上方、超越",
+    "origin": "latin",
+    "variants": [
+      "super",
+      "supr"
+    ]
+  },
+  {
+    "root": "syn-",
+    "type": "prefix",
+    "meaning": "共同、一起",
+    "origin": "greek",
+    "variants": [
+      "syn",
+      "sym",
+      "syl"
+    ]
+  },
+  {
+    "root": "tele-",
+    "type": "prefix",
+    "meaning": "远、远程",
+    "origin": "greek",
+    "variants": [
+      "tele",
+      "tel"
+    ]
+  },
+  {
+    "root": "trans-",
+    "type": "prefix",
+    "meaning": "横过、转变",
+    "origin": "latin",
+    "variants": [
+      "trans",
+      "tran",
+      "tra"
+    ]
+  },
+  {
+    "root": "tri-",
+    "type": "prefix",
+    "meaning": "三",
+    "origin": "latin",
+    "variants": [
+      "tri",
+      "trin"
+    ]
+  },
+  {
+    "root": "ultra-",
+    "type": "prefix",
+    "meaning": "超越、极端",
+    "origin": "latin",
+    "variants": [
+      "ultra",
+      "ulter"
+    ]
+  },
+  {
+    "root": "un-",
+    "type": "prefix",
+    "meaning": "否定、相反动作",
+    "origin": "old-english",
+    "variants": [
+      "un"
+    ]
+  },
+  {
+    "root": "under-",
+    "type": "prefix",
+    "meaning": "在下面、不足",
+    "origin": "old-english",
+    "variants": [
+      "under"
+    ]
+  },
+  {
+    "root": "vice-",
+    "type": "prefix",
+    "meaning": "副、代理",
+    "origin": "latin",
+    "variants": [
+      "vice"
+    ]
+  },
+  {
+    "root": "geo-",
+    "type": "prefix",
+    "meaning": "土地、地球",
+    "origin": "greek",
+    "variants": [
+      "geo"
+    ]
+  },
+  {
+    "root": "hydro-",
+    "type": "prefix",
+    "meaning": "水",
+    "origin": "greek",
+    "variants": [
+      "hydro",
+      "hydr"
+    ]
+  },
+  {
+    "root": "pyro-",
+    "type": "prefix",
+    "meaning": "火、热",
+    "origin": "greek",
+    "variants": [
+      "pyro",
+      "pyr"
+    ]
+  },
+  {
+    "root": "aero-",
+    "type": "prefix",
+    "meaning": "空气、飞行",
+    "origin": "greek",
+    "variants": [
+      "aero",
+      "aer"
+    ]
+  },
+  {
+    "root": "astro-",
+    "type": "prefix",
+    "meaning": "星、天体",
+    "origin": "greek",
+    "variants": [
+      "astro",
+      "aster",
+      "astr"
+    ]
+  },
+  {
+    "root": "cardio-",
+    "type": "prefix",
+    "meaning": "心脏",
+    "origin": "greek",
+    "variants": [
+      "cardio",
+      "cardi"
+    ]
+  },
+  {
+    "root": "chrono-",
+    "type": "prefix",
+    "meaning": "时间",
+    "origin": "greek",
+    "variants": [
+      "chrono",
+      "chron"
+    ]
+  },
+  {
+    "root": "demo-",
+    "type": "prefix",
+    "meaning": "人民、民众",
+    "origin": "greek",
+    "variants": [
+      "demo",
+      "dem"
+    ]
+  },
+  {
+    "root": "neuro-",
+    "type": "prefix",
+    "meaning": "神经",
+    "origin": "greek",
+    "variants": [
+      "neuro",
+      "neur"
+    ]
+  },
+  {
+    "root": "ortho-",
+    "type": "prefix",
+    "meaning": "正确、直",
+    "origin": "greek",
+    "variants": [
+      "ortho",
+      "orth"
+    ]
+  },
+  {
+    "root": "phil-",
+    "type": "prefix",
+    "meaning": "爱、喜好",
+    "origin": "greek",
+    "variants": [
+      "philo",
+      "phil"
+    ]
+  },
+  {
+    "root": "phon-",
+    "type": "prefix",
+    "meaning": "声音、语音",
+    "origin": "greek",
+    "variants": [
+      "phono",
+      "phon"
+    ]
+  },
+  {
+    "root": "photo-",
+    "type": "prefix",
+    "meaning": "光、摄影",
+    "origin": "greek",
+    "variants": [
+      "photo",
+      "phot"
+    ]
+  },
+  {
+    "root": "pseudo-",
+    "type": "prefix",
+    "meaning": "假、伪",
+    "origin": "greek",
+    "variants": [
+      "pseudo",
+      "pseu"
+    ]
+  },
+  {
+    "root": "psych-",
+    "type": "prefix",
+    "meaning": "精神、心理",
+    "origin": "greek",
+    "variants": [
+      "psycho",
+      "psych"
+    ]
+  },
+  {
+    "root": "techno-",
+    "type": "prefix",
+    "meaning": "技艺、技术",
+    "origin": "greek",
+    "variants": [
+      "techno",
+      "techn"
+    ]
+  },
+  {
+    "root": "theo-",
+    "type": "prefix",
+    "meaning": "神",
+    "origin": "greek",
+    "variants": [
+      "theo",
+      "the"
+    ]
+  },
+  {
+    "root": "thermo-",
+    "type": "prefix",
+    "meaning": "热",
+    "origin": "greek",
+    "variants": [
+      "thermo",
+      "therm"
+    ]
+  },
+  {
+    "root": "zoo-",
+    "type": "prefix",
+    "meaning": "动物",
+    "origin": "greek",
+    "variants": [
+      "zoo",
+      "zo"
+    ]
+  },
+  {
+    "root": "act",
+    "type": "root",
+    "meaning": "做、行动、驱动",
+    "origin": "latin",
+    "variants": [
+      "act",
+      "ag"
+    ]
+  },
+  {
+    "root": "alt",
+    "type": "root",
+    "meaning": "高",
+    "origin": "latin",
+    "variants": [
+      "alt",
+      "alti"
+    ]
+  },
+  {
+    "root": "ami",
+    "type": "root",
+    "meaning": "爱、友好",
+    "origin": "latin",
+    "variants": [
+      "ami",
+      "amat",
+      "amor"
+    ]
+  },
+  {
+    "root": "anim",
+    "type": "root",
+    "meaning": "生命、精神",
+    "origin": "latin",
+    "variants": [
+      "anim"
+    ]
+  },
+  {
+    "root": "ann",
+    "type": "root",
+    "meaning": "年",
+    "origin": "latin",
+    "variants": [
+      "ann",
+      "enn"
+    ]
+  },
+  {
+    "root": "anthrop",
+    "type": "root",
+    "meaning": "人类",
+    "origin": "greek",
+    "variants": [
+      "anthrop",
+      "anthro"
+    ]
+  },
+  {
+    "root": "apt",
+    "type": "root",
+    "meaning": "适合、能力",
+    "origin": "latin",
+    "variants": [
+      "apt",
+      "ept"
+    ]
+  },
+  {
+    "root": "aqu",
+    "type": "root",
+    "meaning": "水",
+    "origin": "latin",
+    "variants": [
+      "aqu",
+      "aqua"
+    ]
+  },
+  {
+    "root": "arch",
+    "type": "root",
+    "meaning": "统治、首要、建筑",
+    "origin": "greek",
+    "variants": [
+      "arch",
+      "archy"
+    ]
+  },
+  {
+    "root": "arm",
+    "type": "root",
+    "meaning": "武器、武装",
+    "origin": "latin",
+    "variants": [
+      "arm"
+    ]
+  },
+  {
+    "root": "art",
+    "type": "root",
+    "meaning": "技艺、关节",
+    "origin": "latin",
+    "variants": [
+      "artis",
+      "artific"
+    ]
+  },
+  {
+    "root": "aud",
+    "type": "root",
+    "meaning": "听",
+    "origin": "latin",
+    "variants": [
+      "audi",
+      "audit",
+      "aud"
+    ]
+  },
+  {
+    "root": "aug",
+    "type": "root",
+    "meaning": "增加、增长",
+    "origin": "latin",
+    "variants": [
+      "aug",
+      "auc",
+      "aux"
+    ]
+  },
+  {
+    "root": "bas",
+    "type": "root",
+    "meaning": "低、基础",
+    "origin": "greek",
+    "variants": [
+      "bas",
+      "base",
+      "basil"
+    ]
+  },
+  {
+    "root": "bat",
+    "type": "root",
+    "meaning": "击打",
+    "origin": "latin",
+    "variants": [
+      "bat",
+      "batt"
+    ]
+  },
+  {
+    "root": "bell",
+    "type": "root",
+    "meaning": "战争",
+    "origin": "latin",
+    "variants": [
+      "bell",
+      "bel"
+    ]
+  },
+  {
+    "root": "brev",
+    "type": "root",
+    "meaning": "短、简",
+    "origin": "latin",
+    "variants": [
+      "brev",
+      "brid"
+    ]
+  },
+  {
+    "root": "cap",
+    "type": "root",
+    "meaning": "拿、抓、掌握",
+    "origin": "latin",
+    "variants": [
+      "cap",
+      "capt",
+      "cept",
+      "ceive",
+      "cip"
+    ]
+  },
+  {
+    "root": "ced",
+    "type": "root",
+    "meaning": "行走、退让",
+    "origin": "latin",
+    "variants": [
+      "ced",
+      "cede",
+      "ceed",
+      "cess"
+    ]
+  },
+  {
+    "root": "cid",
+    "type": "root",
+    "meaning": "切、杀、落下",
+    "origin": "latin",
+    "variants": [
+      "cid",
+      "cis",
+      "cise"
+    ]
+  },
+  {
+    "root": "circ",
+    "type": "root",
+    "meaning": "圆、环",
+    "origin": "latin",
+    "variants": [
+      "circ",
+      "cycl"
+    ]
+  },
+  {
+    "root": "cit",
+    "type": "root",
+    "meaning": "唤起、引用、推动",
+    "origin": "latin",
+    "variants": [
+      "cit",
+      "cite"
+    ]
+  },
+  {
+    "root": "civ",
+    "type": "root",
+    "meaning": "公民、文明",
+    "origin": "latin",
+    "variants": [
+      "civ",
+      "civil"
+    ]
+  },
+  {
+    "root": "claim",
+    "type": "root",
+    "meaning": "呼喊、宣称",
+    "origin": "latin",
+    "variants": [
+      "claim",
+      "clam"
+    ]
+  },
+  {
+    "root": "clar",
+    "type": "root",
+    "meaning": "清楚、明亮",
+    "origin": "latin",
+    "variants": [
+      "clar",
+      "clair"
+    ]
+  },
+  {
+    "root": "clud",
+    "type": "root",
+    "meaning": "关闭、结束",
+    "origin": "latin",
+    "variants": [
+      "clud",
+      "clus",
+      "clos",
+      "claus"
+    ]
+  },
+  {
+    "root": "cogn",
+    "type": "root",
+    "meaning": "知道、认识",
+    "origin": "latin",
+    "variants": [
+      "cogn",
+      "gnos",
+      "gnor"
+    ]
+  },
+  {
+    "root": "cord",
+    "type": "root",
+    "meaning": "心、一致",
+    "origin": "latin",
+    "variants": [
+      "cord",
+      "cour",
+      "card"
+    ]
+  },
+  {
+    "root": "corp",
+    "type": "root",
+    "meaning": "身体、团体",
+    "origin": "latin",
+    "variants": [
+      "corp",
+      "corpor"
+    ]
+  },
+  {
+    "root": "cosm",
+    "type": "root",
+    "meaning": "宇宙、秩序",
+    "origin": "greek",
+    "variants": [
+      "cosm",
+      "cosmo"
+    ]
+  },
+  {
+    "root": "cracy",
+    "type": "root",
+    "meaning": "统治、权力",
+    "origin": "greek",
+    "variants": [
+      "cracy",
+      "crat"
+    ]
+  },
+  {
+    "root": "cred",
+    "type": "root",
+    "meaning": "相信、信任",
+    "origin": "latin",
+    "variants": [
+      "cred",
+      "creed"
+    ]
+  },
+  {
+    "root": "crit",
+    "type": "root",
+    "meaning": "判断、区分",
+    "origin": "greek",
+    "variants": [
+      "crit",
+      "cris"
+    ]
+  },
+  {
+    "root": "cruc",
+    "type": "root",
+    "meaning": "十字、关键",
+    "origin": "latin",
+    "variants": [
+      "cruc",
+      "crux",
+      "cross"
+    ]
+  },
+  {
+    "root": "cult",
+    "type": "root",
+    "meaning": "耕种、培养",
+    "origin": "latin",
+    "variants": [
+      "cult",
+      "colony",
+      "colon"
+    ]
+  },
+  {
+    "root": "cur",
+    "type": "root",
+    "meaning": "跑、流、发生",
+    "origin": "latin",
+    "variants": [
+      "cur",
+      "curs",
+      "curr",
+      "cours"
+    ]
+  },
+  {
+    "root": "cura",
+    "type": "root",
+    "meaning": "关心、照料、治疗",
+    "origin": "latin",
+    "variants": [
+      "cura",
+      "cure",
+      "curat"
+    ]
+  },
+  {
+    "root": "dent",
+    "type": "root",
+    "meaning": "牙齿",
+    "origin": "latin",
+    "variants": [
+      "dent",
+      "denti"
+    ]
+  },
+  {
+    "root": "derm",
+    "type": "root",
+    "meaning": "皮肤",
+    "origin": "greek",
+    "variants": [
+      "derm",
+      "derma"
+    ]
+  },
+  {
+    "root": "dict",
+    "type": "root",
+    "meaning": "说、断言、命令",
+    "origin": "latin",
+    "variants": [
+      "dict",
+      "dicat",
+      "diction"
+    ]
+  },
+  {
+    "root": "doc",
+    "type": "root",
+    "meaning": "教、教训",
+    "origin": "latin",
+    "variants": [
+      "doc",
+      "doct"
+    ]
+  },
+  {
+    "root": "domin",
+    "type": "root",
+    "meaning": "统治、主人",
+    "origin": "latin",
+    "variants": [
+      "domin",
+      "dom"
+    ]
+  },
+  {
+    "root": "don",
+    "type": "root",
+    "meaning": "给予、赠送",
+    "origin": "latin",
+    "variants": [
+      "don",
+      "dote",
+      "dow"
+    ]
+  },
+  {
+    "root": "duc",
+    "type": "root",
+    "meaning": "引导、带领",
+    "origin": "latin",
+    "variants": [
+      "duc",
+      "duct",
+      "duce"
+    ]
+  },
+  {
+    "root": "dur",
+    "type": "root",
+    "meaning": "持续、坚硬",
+    "origin": "latin",
+    "variants": [
+      "dur",
+      "dure"
+    ]
+  },
+  {
+    "root": "dyn",
+    "type": "root",
+    "meaning": "力量、动力",
+    "origin": "greek",
+    "variants": [
+      "dyn",
+      "dynam"
+    ]
+  },
+  {
+    "root": "equ",
+    "type": "root",
+    "meaning": "相等、公平",
+    "origin": "latin",
+    "variants": [
+      "equ",
+      "equi",
+      "iqu"
+    ]
+  },
+  {
+    "root": "fac",
+    "type": "root",
+    "meaning": "做、制作、使",
+    "origin": "latin",
+    "variants": [
+      "fac",
+      "fect",
+      "fic",
+      "feas",
+      "feat"
+    ]
+  },
+  {
+    "root": "fall",
+    "type": "root",
+    "meaning": "欺骗、错误",
+    "origin": "latin",
+    "variants": [
+      "fall",
+      "fals",
+      "fault"
+    ]
+  },
+  {
+    "root": "fer",
+    "type": "root",
+    "meaning": "拿、带、产生",
+    "origin": "latin",
+    "variants": [
+      "fer",
+      "ferr"
+    ]
+  },
+  {
+    "root": "fid",
+    "type": "root",
+    "meaning": "信任、忠实",
+    "origin": "latin",
+    "variants": [
+      "fid",
+      "feder"
+    ]
+  },
+  {
+    "root": "fin",
+    "type": "root",
+    "meaning": "结束、界限",
+    "origin": "latin",
+    "variants": [
+      "fin",
+      "fini",
+      "finit"
+    ]
+  },
+  {
+    "root": "firm",
+    "type": "root",
+    "meaning": "坚定、牢固",
+    "origin": "latin",
+    "variants": [
+      "firm"
+    ]
+  },
+  {
+    "root": "flect",
+    "type": "root",
+    "meaning": "弯曲",
+    "origin": "latin",
+    "variants": [
+      "flect",
+      "flex"
+    ]
+  },
+  {
+    "root": "flu",
+    "type": "root",
+    "meaning": "流动",
+    "origin": "latin",
+    "variants": [
+      "flu",
+      "flux",
+      "fluct"
+    ]
+  },
+  {
+    "root": "form",
+    "type": "root",
+    "meaning": "形状、形式",
+    "origin": "latin",
+    "variants": [
+      "form",
+      "formi"
+    ]
+  },
+  {
+    "root": "fort",
+    "type": "root",
+    "meaning": "强、力量",
+    "origin": "latin",
+    "variants": [
+      "fort",
+      "forc"
+    ]
+  },
+  {
+    "root": "fract",
+    "type": "root",
+    "meaning": "打破、碎裂",
+    "origin": "latin",
+    "variants": [
+      "fract",
+      "frag",
+      "fring"
+    ]
+  },
+  {
+    "root": "gen",
+    "type": "root",
+    "meaning": "产生、种族、出生",
+    "origin": "greek",
+    "variants": [
+      "gen",
+      "gener",
+      "gine"
+    ]
+  },
+  {
+    "root": "gest",
+    "type": "root",
+    "meaning": "携带、传送、行为",
+    "origin": "latin",
+    "variants": [
+      "gest",
+      "ger",
+      "gist"
+    ]
+  },
+  {
+    "root": "grad",
+    "type": "root",
+    "meaning": "行走、步伐、等级",
+    "origin": "latin",
+    "variants": [
+      "grad",
+      "gress",
+      "gree"
+    ]
+  },
+  {
+    "root": "grat",
+    "type": "root",
+    "meaning": "感谢、愉快",
+    "origin": "latin",
+    "variants": [
+      "grat",
+      "gree",
+      "grac"
+    ]
+  },
+  {
+    "root": "greg",
+    "type": "root",
+    "meaning": "群体、聚集",
+    "origin": "latin",
+    "variants": [
+      "greg",
+      "gregat"
+    ]
+  },
+  {
+    "root": "hab",
+    "type": "root",
+    "meaning": "拥有、居住、习惯",
+    "origin": "latin",
+    "variants": [
+      "hab",
+      "hibit",
+      "habit"
+    ]
+  },
+  {
+    "root": "ject",
+    "type": "root",
+    "meaning": "投掷、扔",
+    "origin": "latin",
+    "variants": [
+      "ject",
+      "jac",
+      "jet"
+    ]
+  },
+  {
+    "root": "junct",
+    "type": "root",
+    "meaning": "连接、结合",
+    "origin": "latin",
+    "variants": [
+      "junct",
+      "join",
+      "jung"
+    ]
+  },
+  {
+    "root": "jur",
+    "type": "root",
+    "meaning": "法律、誓言、判断",
+    "origin": "latin",
+    "variants": [
+      "jur",
+      "jud",
+      "juris"
+    ]
+  },
+  {
+    "root": "lect",
+    "type": "root",
+    "meaning": "选择、收集、诵读",
+    "origin": "latin",
+    "variants": [
+      "lect",
+      "lig",
+      "elig",
+      "legis"
+    ]
+  },
+  {
+    "root": "leg",
+    "type": "root",
+    "meaning": "法律、指定",
+    "origin": "latin",
+    "variants": [
+      "legis",
+      "legal"
+    ]
+  },
+  {
+    "root": "lev",
+    "type": "root",
+    "meaning": "举起、减轻、轻",
+    "origin": "latin",
+    "variants": [
+      "lev",
+      "lieve",
+      "lief"
+    ]
+  },
+  {
+    "root": "liber",
+    "type": "root",
+    "meaning": "自由",
+    "origin": "latin",
+    "variants": [
+      "liber",
+      "liver"
+    ]
+  },
+  {
+    "root": "loc",
+    "type": "root",
+    "meaning": "地方、放置",
+    "origin": "latin",
+    "variants": [
+      "loc",
+      "locat"
+    ]
+  },
+  {
+    "root": "log",
+    "type": "root",
+    "meaning": "言、学问、理则",
+    "origin": "greek",
+    "variants": [
+      "log",
+      "logue",
+      "loqu",
+      "locut",
+      "ology"
+    ]
+  },
+  {
+    "root": "luc",
+    "type": "root",
+    "meaning": "光、明亮",
+    "origin": "latin",
+    "variants": [
+      "luc",
+      "lum",
+      "lustr",
+      "lus"
+    ]
+  },
+  {
+    "root": "magn",
+    "type": "root",
+    "meaning": "大、伟大",
+    "origin": "latin",
+    "variants": [
+      "magn",
+      "maj",
+      "max",
+      "magni"
+    ]
+  },
+  {
+    "root": "man",
+    "type": "root",
+    "meaning": "手、制作",
+    "origin": "latin",
+    "variants": [
+      "mand",
+      "manu",
+      "manip"
+    ]
+  },
+  {
+    "root": "mar",
+    "type": "root",
+    "meaning": "海",
+    "origin": "latin",
+    "variants": [
+      "marin",
+      "marit",
+      "marine"
+    ]
+  },
+  {
+    "root": "medi",
+    "type": "root",
+    "meaning": "中间",
+    "origin": "latin",
+    "variants": [
+      "medi",
+      "mid",
+      "mod"
+    ]
+  },
+  {
+    "root": "memo",
+    "type": "root",
+    "meaning": "记忆、记得",
+    "origin": "latin",
+    "variants": [
+      "memo",
+      "memor",
+      "mem"
+    ]
+  },
+  {
+    "root": "merg",
+    "type": "root",
+    "meaning": "沉、浸",
+    "origin": "latin",
+    "variants": [
+      "merg",
+      "mers"
+    ]
+  },
+  {
+    "root": "meter",
+    "type": "root",
+    "meaning": "测量、计量",
+    "origin": "greek",
+    "variants": [
+      "meter",
+      "metr",
+      "metry"
+    ]
+  },
+  {
+    "root": "migr",
+    "type": "root",
+    "meaning": "迁移、移动",
+    "origin": "latin",
+    "variants": [
+      "migr",
+      "migrat"
+    ]
+  },
+  {
+    "root": "min",
+    "type": "root",
+    "meaning": "小、突出、矿",
+    "origin": "latin",
+    "variants": [
+      "mini",
+      "minu",
+      "minent",
+      "minim"
+    ]
+  },
+  {
+    "root": "mir",
+    "type": "root",
+    "meaning": "惊奇、看",
+    "origin": "latin",
+    "variants": [
+      "mir",
+      "mirat",
+      "marv"
+    ]
+  },
+  {
+    "root": "miss",
+    "type": "root",
+    "meaning": "送、放出、委派",
+    "origin": "latin",
+    "variants": [
+      "miss",
+      "mit",
+      "mitt"
+    ]
+  },
+  {
+    "root": "mob",
+    "type": "root",
+    "meaning": "移动、运动",
+    "origin": "latin",
+    "variants": [
+      "mob",
+      "mot",
+      "mov"
+    ]
+  },
+  {
+    "root": "morph",
+    "type": "root",
+    "meaning": "形态、形状",
+    "origin": "greek",
+    "variants": [
+      "morph",
+      "morpho"
+    ]
+  },
+  {
+    "root": "mort",
+    "type": "root",
+    "meaning": "死亡",
+    "origin": "latin",
+    "variants": [
+      "mort",
+      "morbid",
+      "mortal"
+    ]
+  },
+  {
+    "root": "mut",
+    "type": "root",
+    "meaning": "改变、交换",
+    "origin": "latin",
+    "variants": [
+      "mut",
+      "mutat"
+    ]
+  },
+  {
+    "root": "nat",
+    "type": "root",
+    "meaning": "出生、天生",
+    "origin": "latin",
+    "variants": [
+      "nati",
+      "natu",
+      "nasc",
+      "natal"
+    ]
+  },
+  {
+    "root": "nau",
+    "type": "root",
+    "meaning": "船、航行",
+    "origin": "greek",
+    "variants": [
+      "nau",
+      "nav",
+      "naut"
+    ]
+  },
+  {
+    "root": "nom",
+    "type": "root",
+    "meaning": "名字、名称",
+    "origin": "greek",
+    "variants": [
+      "nom",
+      "nym",
+      "nomin",
+      "noun"
+    ]
+  },
+  {
+    "root": "norm",
+    "type": "root",
+    "meaning": "标准、规范",
+    "origin": "latin",
+    "variants": [
+      "norm",
+      "norma"
+    ]
+  },
+  {
+    "root": "nov",
+    "type": "root",
+    "meaning": "新",
+    "origin": "latin",
+    "variants": [
+      "nov",
+      "nova"
+    ]
+  },
+  {
+    "root": "oper",
+    "type": "root",
+    "meaning": "工作、运转",
+    "origin": "latin",
+    "variants": [
+      "oper",
+      "opera"
+    ]
+  },
+  {
+    "root": "path",
+    "type": "root",
+    "meaning": "感受、痛苦、疾病",
+    "origin": "greek",
+    "variants": [
+      "path",
+      "pass",
+      "pati"
+    ]
+  },
+  {
+    "root": "ped",
+    "type": "root",
+    "meaning": "脚；或儿童、教育",
+    "origin": "latin",
+    "variants": [
+      "ped",
+      "pod"
+    ]
+  },
+  {
+    "root": "pel",
+    "type": "root",
+    "meaning": "推、驱使、驱动",
+    "origin": "latin",
+    "variants": [
+      "pel",
+      "puls"
+    ]
+  },
+  {
+    "root": "pend",
+    "type": "root",
+    "meaning": "悬挂、称量、花费",
+    "origin": "latin",
+    "variants": [
+      "pend",
+      "pens",
+      "pond"
+    ]
+  },
+  {
+    "root": "pet",
+    "type": "root",
+    "meaning": "追求、请求",
+    "origin": "latin",
+    "variants": [
+      "pet",
+      "petit",
+      "peat"
+    ]
+  },
+  {
+    "root": "pict",
+    "type": "root",
+    "meaning": "画、描绘",
+    "origin": "latin",
+    "variants": [
+      "pict",
+      "pig",
+      "paint"
+    ]
+  },
+  {
+    "root": "plac",
+    "type": "root",
+    "meaning": "取悦、安抚",
+    "origin": "latin",
+    "variants": [
+      "plac",
+      "plais",
+      "pleas"
+    ]
+  },
+  {
+    "root": "plic",
+    "type": "root",
+    "meaning": "折叠、缠绕",
+    "origin": "latin",
+    "variants": [
+      "plic",
+      "plex",
+      "ply",
+      "ploy"
+    ]
+  },
+  {
+    "root": "pon",
+    "type": "root",
+    "meaning": "放置、提出",
+    "origin": "latin",
+    "variants": [
+      "pon",
+      "pos",
+      "posit",
+      "pose"
+    ]
+  },
+  {
+    "root": "popul",
+    "type": "root",
+    "meaning": "人民、民众",
+    "origin": "latin",
+    "variants": [
+      "popul",
+      "publ"
+    ]
+  },
+  {
+    "root": "port",
+    "type": "root",
+    "meaning": "拿、搬运、门",
+    "origin": "latin",
+    "variants": [
+      "port",
+      "porta"
+    ]
+  },
+  {
+    "root": "pot",
+    "type": "root",
+    "meaning": "力量、能力",
+    "origin": "latin",
+    "variants": [
+      "pot",
+      "poss",
+      "potent"
+    ]
+  },
+  {
+    "root": "prehens",
+    "type": "root",
+    "meaning": "抓住、理解",
+    "origin": "latin",
+    "variants": [
+      "prehens",
+      "prehend",
+      "pris",
+      "prise"
+    ]
+  },
+  {
+    "root": "press",
+    "type": "root",
+    "meaning": "压、压迫",
+    "origin": "latin",
+    "variants": [
+      "press",
+      "print"
+    ]
+  },
+  {
+    "root": "prim",
+    "type": "root",
+    "meaning": "第一、首要",
+    "origin": "latin",
+    "variants": [
+      "prim",
+      "prin",
+      "prem"
+    ]
+  },
+  {
+    "root": "prob",
+    "type": "root",
+    "meaning": "试验、验证、正直",
+    "origin": "latin",
+    "variants": [
+      "prob",
+      "prov",
+      "proof"
+    ]
+  },
+  {
+    "root": "quis",
+    "type": "root",
+    "meaning": "寻求、询问",
+    "origin": "latin",
+    "variants": [
+      "quis",
+      "quir",
+      "quest",
+      "quer"
+    ]
+  },
+  {
+    "root": "rect",
+    "type": "root",
+    "meaning": "统治、使正直、直",
+    "origin": "latin",
+    "variants": [
+      "rect",
+      "reg",
+      "rig"
+    ]
+  },
+  {
+    "root": "rid",
+    "type": "root",
+    "meaning": "笑、嘲笑",
+    "origin": "latin",
+    "variants": [
+      "rid",
+      "riso",
+      "risible"
+    ]
+  },
+  {
+    "root": "rupt",
+    "type": "root",
+    "meaning": "断裂、破坏",
+    "origin": "latin",
+    "variants": [
+      "rupt",
+      "rout"
+    ]
+  },
+  {
+    "root": "sat",
+    "type": "root",
+    "meaning": "足够、满足",
+    "origin": "latin",
+    "variants": [
+      "sat",
+      "satis",
+      "satur"
+    ]
+  },
+  {
+    "root": "scend",
+    "type": "root",
+    "meaning": "攀爬、上升",
+    "origin": "latin",
+    "variants": [
+      "scend",
+      "scent",
+      "scal"
+    ]
+  },
+  {
+    "root": "sci",
+    "type": "root",
+    "meaning": "知道、学问",
+    "origin": "latin",
+    "variants": [
+      "sci",
+      "scit"
+    ]
+  },
+  {
+    "root": "scrib",
+    "type": "root",
+    "meaning": "写、记录",
+    "origin": "latin",
+    "variants": [
+      "scrib",
+      "script"
+    ]
+  },
+  {
+    "root": "sect",
+    "type": "root",
+    "meaning": "切割、分开",
+    "origin": "latin",
+    "variants": [
+      "sect",
+      "seg",
+      "cut"
+    ]
+  },
+  {
+    "root": "sequ",
+    "type": "root",
+    "meaning": "跟随、随后",
+    "origin": "latin",
+    "variants": [
+      "sequ",
+      "secut",
+      "sue"
+    ]
+  },
+  {
+    "root": "sens",
+    "type": "root",
+    "meaning": "感觉、感知",
+    "origin": "latin",
+    "variants": [
+      "sens",
+      "sent"
+    ]
+  },
+  {
+    "root": "sid",
+    "type": "root",
+    "meaning": "坐、停留",
+    "origin": "latin",
+    "variants": [
+      "sidi",
+      "sess",
+      "seda"
+    ]
+  },
+  {
+    "root": "sist",
+    "type": "root",
+    "meaning": "站立、放置、坚持",
+    "origin": "latin",
+    "variants": [
+      "sist",
+      "stit",
+      "stat",
+      "stan",
+      "stitut"
+    ]
+  },
+  {
+    "root": "soci",
+    "type": "root",
+    "meaning": "同伴、社会",
+    "origin": "latin",
+    "variants": [
+      "soci",
+      "social"
+    ]
+  },
+  {
+    "root": "sol",
+    "type": "root",
+    "meaning": "单独、太阳",
+    "origin": "latin",
+    "variants": [
+      "sol",
+      "soli",
+      "solo"
+    ]
+  },
+  {
+    "root": "solv",
+    "type": "root",
+    "meaning": "松开、解决",
+    "origin": "latin",
+    "variants": [
+      "solv",
+      "solu",
+      "solut"
+    ]
+  },
+  {
+    "root": "spect",
+    "type": "root",
+    "meaning": "看、观察",
+    "origin": "latin",
+    "variants": [
+      "spect",
+      "spec",
+      "spic",
+      "spy",
+      "scope"
+    ]
+  },
+  {
+    "root": "spir",
+    "type": "root",
+    "meaning": "呼吸、精神",
+    "origin": "latin",
+    "variants": [
+      "spir",
+      "spire"
+    ]
+  },
+  {
+    "root": "struct",
+    "type": "root",
+    "meaning": "建造、堆积",
+    "origin": "latin",
+    "variants": [
+      "struct",
+      "stru",
+      "stroy"
+    ]
+  },
+  {
+    "root": "tain",
+    "type": "root",
+    "meaning": "触摸、持有",
+    "origin": "latin",
+    "variants": [
+      "tain",
+      "ten",
+      "tinu",
+      "tact",
+      "tang"
+    ]
+  },
+  {
+    "root": "tempor",
+    "type": "root",
+    "meaning": "时间",
+    "origin": "latin",
+    "variants": [
+      "tempor",
+      "tempo"
+    ]
+  },
+  {
+    "root": "tend",
+    "type": "root",
+    "meaning": "伸展、倾向",
+    "origin": "latin",
+    "variants": [
+      "tend",
+      "tens",
+      "tent"
+    ]
+  },
+  {
+    "root": "terr",
+    "type": "root",
+    "meaning": "土地；或使惊恐",
+    "origin": "latin",
+    "variants": [
+      "terr",
+      "terre",
+      "territ"
+    ]
+  },
+  {
+    "root": "tract",
+    "type": "root",
+    "meaning": "拉、拖、牵引",
+    "origin": "latin",
+    "variants": [
+      "tract",
+      "trac",
+      "treat"
+    ]
+  },
+  {
+    "root": "tribut",
+    "type": "root",
+    "meaning": "给予、分配",
+    "origin": "latin",
+    "variants": [
+      "tribut",
+      "tribute"
+    ]
+  },
+  {
+    "root": "val",
+    "type": "root",
+    "meaning": "价值、强壮",
+    "origin": "latin",
+    "variants": [
+      "val",
+      "vail",
+      "valu"
+    ]
+  },
+  {
+    "root": "ven",
+    "type": "root",
+    "meaning": "来、到来",
+    "origin": "latin",
+    "variants": [
+      "ven",
+      "vent",
+      "vene"
+    ]
+  },
+  {
+    "root": "ver",
+    "type": "root",
+    "meaning": "真实",
+    "origin": "latin",
+    "variants": [
+      "veri",
+      "vera",
+      "verif"
+    ]
+  },
+  {
+    "root": "vert",
+    "type": "root",
+    "meaning": "转、转变",
+    "origin": "latin",
+    "variants": [
+      "vert",
+      "vers",
+      "vort"
+    ]
+  },
+  {
+    "root": "via",
+    "type": "root",
+    "meaning": "路、途径",
+    "origin": "latin",
+    "variants": [
+      "via",
+      "vi",
+      "voy"
+    ]
+  },
+  {
+    "root": "vid",
+    "type": "root",
+    "meaning": "看、看见",
+    "origin": "latin",
+    "variants": [
+      "vid",
+      "vis",
+      "view",
+      "vey"
+    ]
+  },
+  {
+    "root": "vit",
+    "type": "root",
+    "meaning": "生命、活力",
+    "origin": "latin",
+    "variants": [
+      "vit",
+      "viv",
+      "vig"
+    ]
+  },
+  {
+    "root": "voc",
+    "type": "root",
+    "meaning": "叫喊、声音、召唤",
+    "origin": "latin",
+    "variants": [
+      "voc",
+      "vok",
+      "vocat",
+      "vouch"
+    ]
+  },
+  {
+    "root": "volv",
+    "type": "root",
+    "meaning": "滚动、转动",
+    "origin": "latin",
+    "variants": [
+      "volv",
+      "volu",
+      "volt"
+    ]
+  },
+  {
+    "root": "-able",
+    "type": "suffix",
+    "meaning": "能…的、可…的",
+    "origin": "latin",
+    "variants": [
+      "able",
+      "ible",
+      "ble"
+    ]
+  },
+  {
+    "root": "-age",
+    "type": "suffix",
+    "meaning": "集合、行为结果、状态",
+    "origin": "latin",
+    "variants": [
+      "age"
+    ]
+  },
+  {
+    "root": "-al",
+    "type": "suffix",
+    "meaning": "…的、行为（名词）",
+    "origin": "latin",
+    "variants": [
+      "ial",
+      "ual",
+      "al"
+    ]
+  },
+  {
+    "root": "-ance",
+    "type": "suffix",
+    "meaning": "性质、状态、过程",
+    "origin": "latin",
+    "variants": [
+      "ance",
+      "ence",
+      "ancy",
+      "ency"
+    ]
+  },
+  {
+    "root": "-ant",
+    "type": "suffix",
+    "meaning": "…的人/物；…的",
+    "origin": "latin",
+    "variants": [
+      "ant",
+      "ent"
+    ]
+  },
+  {
+    "root": "-ary",
+    "type": "suffix",
+    "meaning": "与…有关的、场所",
+    "origin": "latin",
+    "variants": [
+      "ary",
+      "arium"
+    ]
+  },
+  {
+    "root": "-ate",
+    "type": "suffix",
+    "meaning": "使…、具有…的",
+    "origin": "latin",
+    "variants": [
+      "ate"
+    ]
+  },
+  {
+    "root": "-cy",
+    "type": "suffix",
+    "meaning": "状态、职位、性质",
+    "origin": "latin",
+    "variants": [
+      "cy"
+    ]
+  },
+  {
+    "root": "-dom",
+    "type": "suffix",
+    "meaning": "领域、状态、集合",
+    "origin": "old-english",
+    "variants": [
+      "dom"
+    ]
+  },
+  {
+    "root": "-ful",
+    "type": "suffix",
+    "meaning": "充满…的、有…性质的",
+    "origin": "old-english",
+    "variants": [
+      "ful"
+    ]
+  },
+  {
+    "root": "-fy",
+    "type": "suffix",
+    "meaning": "使…化、变成",
+    "origin": "latin",
+    "variants": [
+      "ify",
+      "fy"
+    ]
+  },
+  {
+    "root": "-hood",
+    "type": "suffix",
+    "meaning": "身份、状态、时期",
+    "origin": "old-english",
+    "variants": [
+      "hood"
+    ]
+  },
+  {
+    "root": "-ic",
+    "type": "suffix",
+    "meaning": "…的、与…有关",
+    "origin": "greek",
+    "variants": [
+      "ical",
+      "ic"
+    ]
+  },
+  {
+    "root": "-ion",
+    "type": "suffix",
+    "meaning": "行为、过程、结果",
+    "origin": "latin",
+    "variants": [
+      "ation",
+      "ition",
+      "tion",
+      "sion",
+      "ion"
+    ]
+  },
+  {
+    "root": "-ish",
+    "type": "suffix",
+    "meaning": "似…的、略带…的",
+    "origin": "old-english",
+    "variants": [
+      "ish"
+    ]
+  },
+  {
+    "root": "-ism",
+    "type": "suffix",
+    "meaning": "主义、学说、行为",
+    "origin": "greek",
+    "variants": [
+      "ism"
+    ]
+  },
+  {
+    "root": "-ist",
+    "type": "suffix",
+    "meaning": "从事…的人、信仰者",
+    "origin": "greek",
+    "variants": [
+      "ist"
+    ]
+  },
+  {
+    "root": "-ity",
+    "type": "suffix",
+    "meaning": "性质、状态、程度",
+    "origin": "latin",
+    "variants": [
+      "ity",
+      "ty"
+    ]
+  },
+  {
+    "root": "-ive",
+    "type": "suffix",
+    "meaning": "有…倾向的、…的",
+    "origin": "latin",
+    "variants": [
+      "ive",
+      "ative",
+      "itive"
+    ]
+  },
+  {
+    "root": "-ize",
+    "type": "suffix",
+    "meaning": "使…化、置于…状态",
+    "origin": "greek",
+    "variants": [
+      "ize",
+      "ise"
+    ]
+  },
+  {
+    "root": "-less",
+    "type": "suffix",
+    "meaning": "无…的、缺乏",
+    "origin": "old-english",
+    "variants": [
+      "less"
+    ]
+  },
+  {
+    "root": "-ly",
+    "type": "suffix",
+    "meaning": "副词后缀；有…性质的",
+    "origin": "old-english",
+    "variants": [
+      "ly"
+    ]
+  },
+  {
+    "root": "-ment",
+    "type": "suffix",
+    "meaning": "行为、结果、状态",
+    "origin": "latin",
+    "variants": [
+      "ment"
+    ]
+  },
+  {
+    "root": "-ness",
+    "type": "suffix",
+    "meaning": "性质、状态、程度",
+    "origin": "old-english",
+    "variants": [
+      "ness"
+    ]
+  },
+  {
+    "root": "-ous",
+    "type": "suffix",
+    "meaning": "充满…的、具有…的",
+    "origin": "latin",
+    "variants": [
+      "ious",
+      "uous",
+      "eous",
+      "ous",
+      "ose"
+    ]
+  },
+  {
+    "root": "-ship",
+    "type": "suffix",
+    "meaning": "身份、关系、技艺",
+    "origin": "old-english",
+    "variants": [
+      "ship"
+    ]
+  },
+  {
+    "root": "-ude",
+    "type": "suffix",
+    "meaning": "状态、程度、性质",
+    "origin": "latin",
+    "variants": [
+      "itude",
+      "ude"
+    ]
+  },
+  {
+    "root": "-ure",
+    "type": "suffix",
+    "meaning": "行为、结果、职能",
+    "origin": "latin",
+    "variants": [
+      "ure",
+      "ature",
+      "iture"
+    ]
+  },
+  {
+    "root": "-ward",
+    "type": "suffix",
+    "meaning": "朝向…方向",
+    "origin": "old-english",
+    "variants": [
+      "wards",
+      "ward"
+    ]
+  },
+  {
+    "root": "-wise",
+    "type": "suffix",
+    "meaning": "方式、方面、方向",
+    "origin": "old-english",
+    "variants": [
+      "wise"
+    ]
+  }
+]

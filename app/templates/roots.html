@@ -1,0 +1,62 @@
+{% extends "base.html" %}
+{% block content %}
+
+<section class="section-head">
+  <div>
+    <h2>词根词缀总览</h2>
+    <p>共 {{ stats.total }} 个单词，拆到 {{ total_morphemes }} 个词素下</p>
+  </div>
+  <div class="filter-bar">
+    <a href="{{ url_for('roots.overview', exam=exam) }}" class="pill {{ 'active' if root_type=='all' }}">全部</a>
+    <a href="{{ url_for('roots.overview', exam=exam, type='root') }}" class="pill {{ 'active' if root_type=='root' }}">词根</a>
+    <a href="{{ url_for('roots.overview', exam=exam, type='prefix') }}" class="pill {{ 'active' if root_type=='prefix' }}">前缀</a>
+    <a href="{{ url_for('roots.overview', exam=exam, type='suffix') }}" class="pill {{ 'active' if root_type=='suffix' }}">后缀</a>
+  </div>
+</section>
+
+{% for group in groups %}
+  {% if group['items'] %}
+  <section class="section">
+    <div class="group-head">
+      <h3>{{ group.label }}<small>{{ group.desc }}</small></h3>
+      <span class="group-count">{{ group['items']|length }} 组</span>
+    </div>
+    <div class="root-grid">
+      {% for r in group['items'] %}
+        <a href="{{ url_for('main.words', exam=exam, root=r.id) }}" class="root-card type-{{ r.type }}">
+          <div class="root-card-top">
+            <span class="type-pill">{{ group.label }}</span>
+            <span class="count-pill">{{ r.word_count }} 词</span>
+          </div>
+          <h3>{{ r.root }}</h3>
+          <p class="root-meaning">{{ r.meaning }}</p>
+          <div class="progress-track"><i style="width: {{ (r.mastered_count / r.word_count * 100) if r.word_count else 0 }}%"></i></div>
+          <span class="root-meta">{{ r.origin|origin_label }} · 已掌握 {{ r.mastered_count or 0 }}/{{ r.word_count }}</span>
+        </a>
+      {% endfor %}
+    </div>
+  </section>
+  {% endif %}
+{% endfor %}
+
+{% if root_type == 'all' and unclassified.word_count %}
+<section class="section">
+  <div class="group-head">
+    <h3>其他<small>未自动归类到已知词根的基础词</small></h3>
+    <span class="group-count">{{ unclassified.word_count }} 词</span>
+  </div>
+  <div class="root-grid">
+    <a href="{{ url_for('main.words', exam=exam, root='none') }}" class="root-card type-none">
+      <div class="root-card-top">
+        <span class="type-pill">其他</span>
+        <span class="count-pill">{{ unclassified.word_count }} 词</span>
+      </div>
+      <h3>未归类单词</h3>
+      <p class="root-meaning">多为日耳曼语源基础词或复合词</p>
+      <span class="root-meta">已掌握 {{ unclassified.mastered_count or 0 }}/{{ unclassified.word_count }}</span>
+    </a>
+  </div>
+</section>
+{% endif %}
+
+{% endblock %}

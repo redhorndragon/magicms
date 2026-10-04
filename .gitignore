@@ -1,0 +1,17 @@
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.DS_Store
+
+# 编辑器 / IDE 配置
+.idea/
+.vscode/
+.codebuddy
+*.iml
+
+# 体积大且可由 scripts/ 重建
+data/raw/
+data/vocab.db
+data/vocab.db-wal
+data/vocab.db-shm

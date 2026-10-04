@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="layout">
+  {# 左侧词根列表：点击其中的链接只局部刷新右侧内容（见 app.js 的 data-nav 处理），
+     本列表的 DOM 不重建，滚动位置与分组展开状态得以保留。 #}
+  <aside class="side-panel">
+    <div class="side-head">
+      <span>按词根筛选</span>
+      <a href="{{ url_for('main.words', exam=exam, status=status, sort=sort, q=q) }}"
+         class="pill {{ 'active' if root=='all' }}" data-nav="words">全部</a>
+    </div>
+    <div class="side-body">
+      {% for group in root_tree %}
+        {% if group['items'] %}
+          <details class="side-group" open>
+            <summary>{{ group.label }}<span>{{ group['items']|length }}</span></summary>
+            <ul>
+              {% for r in group['items'] %}
+                <li>
+                  <a href="{{ url_for('main.words', exam=exam, root=r.id, status=status, sort=sort, q=q) }}"
+                     class="side-item {{ 'active' if root|string == r.id|string }}" data-nav="words">
+                    <span class="side-root">{{ r.root }}</span>
+                    <small>{{ r.meaning }}</small>
+                    <em>{{ r.word_count }}</em>
+                  </a>
+                </li>
+              {% endfor %}
+            </ul>
+          </details>
+        {% endif %}
+      {% endfor %}
+      <a href="{{ url_for('main.words', exam=exam, root='none', status=status, sort=sort, q=q) }}"
+         class="side-item single {{ 'active' if root=='none' }}" data-nav="words">
+        <span class="side-root">未归类</span><small>基础词 / 复合词</small>
+      </a>
+    </div>
+  </aside>
+
+  <div class="content-col">
+    {% include "_words_body.html" %}
+  </div>
+</div>
+
+{% endblock %}

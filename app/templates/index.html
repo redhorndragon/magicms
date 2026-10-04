@@ -1,0 +1,72 @@
+{% extends "base.html" %}
+{% block content %}
+
+<section class="hero">
+  <div class="hero-copy">
+    <h1>用词根，把雅思托福词汇<span class="grad-text">成串</span>记住</h1>
+    <p>同一个词根的词放在一起看，一次记住一组。{{ stats.total }} 个词条，按词根 / 前缀 / 后缀自动归类，看到不会的一键标记。</p>
+    <div class="hero-actions">
+      <a href="{{ url_for('roots.overview', exam=exam) }}" class="btn-primary">浏览词根</a>
+      <a href="{{ url_for('main.review', exam=exam) }}" class="btn-ghost">今天复习 {{ stats.unknown + stats.learning }} 个生词</a>
+    </div>
+  </div>
+
+  <div class="hero-ring">
+    {% set done = stats.mastered %}
+    {% set pct = (done / stats.total * 100) if stats.total else 0 %}
+    <div class="ring" style="--pct: {{ pct|round(1) }}">
+      <div class="ring-inner">
+        <strong>{{ pct|round(1) }}%</strong>
+        <span>已掌握</span>
+      </div>
+    </div>
+    <ul class="ring-legend">
+      <li><i class="dot dot-mastered"></i>已掌握<span>{{ stats.mastered }}</span></li>
+      <li><i class="dot dot-learning"></i>学习中<span>{{ stats.learning }}</span></li>
+      <li><i class="dot dot-unknown"></i>不认识<span>{{ stats.unknown }}</span></li>
+      <li><i class="dot"></i>未标记<span>{{ stats.total - stats.touched }}</span></li>
+    </ul>
+  </div>
+</section>
+
+<section class="section">
+  <div class="section-head">
+    <div>
+      <h2>词量最多的词根</h2>
+      <p>点击任意词根，查看它旗下的全部单词并逐个标记</p>
+    </div>
+    <a href="{{ url_for('roots.overview', exam=exam) }}" class="link-more">查看全部 →</a>
+  </div>
+
+  <div class="root-grid">
+    {% for r in overview %}
+      <a href="{{ url_for('main.words', exam=exam, root=r.id) }}" class="root-card type-{{ r.type }}">
+        <div class="root-card-top">
+          <span class="type-pill">{{ {'root':'词根','prefix':'前缀','suffix':'后缀'}[r.type] }}</span>
+          <span class="count-pill">{{ r.word_count }} 词</span>
+        </div>
+        <h3>{{ r.root }}</h3>
+        <p class="root-meaning">{{ r.meaning }}</p>
+        <div class="progress-track">
+          <i style="width: {{ (r.mastered_count / r.word_count * 100) if r.word_count else 0 }}%"></i>
+        </div>
+        <span class="root-meta">{{ r.origin|origin_label }} · 已掌握 {{ r.mastered_count or 0 }}/{{ r.word_count }}</span>
+      </a>
+    {% endfor %}
+
+    {% if unclassified.word_count %}
+      <a href="{{ url_for('main.words', exam=exam, root='none') }}" class="root-card type-none">
+        <div class="root-card-top">
+          <span class="type-pill">其他</span>
+          <span class="count-pill">{{ unclassified.word_count }} 词</span>
+        </div>
+        <h3>未归类</h3>
+        <p class="root-meaning">基础词与复合词，未能自动匹配到已知词根</p>
+        <div class="progress-track"><i style="width: {{ (unclassified.mastered_count / unclassified.word_count * 100) if unclassified.word_count else 0 }}%"></i></div>
+        <span class="root-meta">同样可以标记与复习</span>
+      </a>
+    {% endif %}
+  </div>
+</section>
+
+{% endblock %}

@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block title %}页面不存在 · RootVocab{% endblock %}
+{% block content %}
+<section class="empty-state">
+  <div class="empty-emoji">404</div>
+  <h2>没有找到这个单词</h2>
+  <p>它可能不在当前筛选的词书中，试试切到「全部」或换个关键词。</p>
+  <a href="{{ url_for('main.words', exam='all') }}" class="btn-primary">回到单词列表</a>
+</section>
+{% endblock %}

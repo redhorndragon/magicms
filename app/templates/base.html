@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{% block title %}词根 · 雅思托福词汇{% endblock %}</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/app.css') }}">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="app-body">
+
+  <header class="glass-nav">
+    <div class="nav-inner">
+      <a href="{{ url_for('main.index', exam=exam) }}" class="brand">
+        <span class="brand-mark">R</span>
+        <span class="brand-text">RootVocab<small>词根成串记单词</small></span>
+      </a>
+
+      <nav class="nav-links">
+        <a href="{{ url_for('main.index', exam=exam) }}" class="nav-item {{ 'active' if request.endpoint == 'main.index' }}">概览</a>
+        <a href="{{ url_for('roots.overview', exam=exam) }}" class="nav-item {{ 'active' if request.endpoint == 'roots.overview' }}">词根</a>
+        <a href="{{ url_for('main.words', exam=exam) }}" class="nav-item {{ 'active' if request.endpoint in ['main.words','main.word_detail'] }}">单词</a>
+        <a href="{{ url_for('main.review', exam=exam) }}" class="nav-item {{ 'active' if request.endpoint == 'main.review' }}">
+          生词本{% if stats and stats.unknown %}<span class="badge-dot"></span>{% endif %}
+        </a>
+        <a href="{{ url_for('main.docs') }}" class="nav-item" target="_blank" rel="noopener"
+           title="预览导出的静态生词表（新标签打开）">生词表 ↗</a>
+        <button type="button" class="nav-icon-btn" data-export
+                title="重新生成静态生词表（执行 scripts/export_unknown.py）">↻</button>
+        <a href="{{ url_for('main.generate_pdf') }}" class="nav-text-btn"
+           title="生成 PDF 生词表：一行一个单词，含音标与释义，每页 3 栏便于打印">PDF</a>
+      </nav>
+
+      <div class="exam-switch">
+        {% for tab in tabs %}
+          <a href="{{ request.path }}?exam={{ tab.key }}" class="exam-pill {{ 'active' if tab.active }}">{{ tab.label }}</a>
+        {% endfor %}
+      </div>
+
+      <form class="nav-search" action="{{ url_for('main.words') }}" method="get">
+        <input type="hidden" name="exam" value="{{ exam }}">
+        <input type="text" name="q" value="{{ q or '' }}" placeholder="搜索单词或释义…" autocomplete="off">
+      </form>
+
+      <div class="user-switch" title="切换用户：每个用户的学习进度相互独立">
+        <span class="user-label">用户</span>
+        <select id="user-select" class="user-select">
+          {% for u in users %}
+            <option value="{{ u }}" {{ 'selected' if u == current_user }}>{{ u }}</option>
+          {% endfor %}
+        </select>
+      </div>
+
+      <div class="stat-chips">
+        <a href="{{ url_for('main.words', exam=exam, status='unknown') }}"
+           class="chip chip-unknown" title="只看「不认识」的词">不认识 {{ stats.unknown }}</a>
+        <a href="{{ url_for('main.words', exam=exam, status='learning') }}"
+           class="chip chip-learning" title="只看「学习中」的词">学习中 {{ stats.learning }}</a>
+        <a href="{{ url_for('main.words', exam=exam, status='mastered') }}"
+           class="chip chip-mastered" title="只看「已掌握」的词">已掌握 {{ stats.mastered }}</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="page">
+    {% block content %}{% endblock %}
+  </main>
+
+  <footer class="site-footer">
+    <span>数据来自开源词表 · 本地运行于 SQLite · 学习进度按用户分别保存在本机 data/vocab.db</span>
+  </footer>
+
+  <script src="{{ url_for('static', filename='js/app.js') }}" defer></script>
+  {% block scripts %}{% endblock %}
+</body>
+</html>

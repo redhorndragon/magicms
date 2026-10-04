@@ -1,0 +1,98 @@
+{% extends "base.html" %}
+{% block title %}{{ word.spelling }} · 单词详情{% endblock %}
+{% block content %}
+
+<article class="detail">
+  <div class="detail-main">
+    <div class="detail-head">
+      <div>
+        <h1 class="detail-spell">{{ word.spelling }}</h1>
+        <div class="phonetic big">
+          {% if word.uk_phonetic %}<span>英 <b>/{{ word.uk_phonetic }}/</b></span>{% endif %}
+          {% if word.us_phonetic %}<span>美 <b>/{{ word.us_phonetic }}/</b></span>{% endif %}
+        </div>
+      </div>
+      <div class="detail-actions">
+        <div class="status-group big" data-wordid="{{ word.wordid }}">
+          <button class="status-opt big status-opt-unknown {{ 'on' if word.status == 'unknown' }}"
+                  data-set="{{ word.wordid }}" data-status="unknown">不认识</button>
+          <button class="status-opt big status-opt-learning {{ 'on' if word.status == 'learning' }}"
+                  data-set="{{ word.wordid }}" data-status="learning">学习中</button>
+          <button class="status-opt big status-opt-mastered {{ 'on' if word.status == 'mastered' }}"
+                  data-set="{{ word.wordid }}" data-status="mastered">已掌握</button>
+        </div>
+        <button class="star-btn big {{ 'on' if word.starred }}" data-star="{{ word.wordid }}">★ 收藏</button>
+      </div>
+    </div>
+
+    <div class="tag-row">
+      {% if word.pos %}<span class="pos-tag big">{{ word.pos }}</span>{% endif %}
+      {% for b in books %}<span class="book-tag">{{ b.name }}</span>{% endfor %}
+      {% if word.root_source == 'manual' %}<span class="book-tag">人工归类</span>{% endif %}
+    </div>
+
+    <section class="block">
+      <h3>中文释义</h3>
+      <ul class="meaning-list">
+        {% for m in (word.meaning|split_meanings) %}<li>{{ m }}</li>{% endfor %}
+      </ul>
+    </section>
+
+    <section class="block">
+      <h3>例句{% if examples %}<small>{{ examples|length }} 条</small>{% endif %}</h3>
+      {% if examples %}
+        <ul class="example-list">
+          {% for ex in examples %}
+            <li>
+              <p class="ex-en">{{ ex.en|highlight(word.spelling)|safe }}</p>
+              {% if ex.cn %}<p class="ex-cn">{{ ex.cn }}</p>{% endif %}
+            </li>
+          {% endfor %}
+        </ul>
+      {% else %}
+        <p class="muted">这个词暂时没有收录例句。</p>
+      {% endif %}
+    </section>
+  </div>
+
+  <aside class="detail-side">
+    {% if word.root_id %}
+      <section class="side-card">
+        <h4>所属词根</h4>
+        <div class="side-root-title">
+          <strong>{{ word.root_name }}</strong>
+          <span class="type-pill">{{ {'root':'词根','prefix':'前缀','suffix':'后缀'}[word.root_type] }}</span>
+        </div>
+        <p>{{ word.root_meaning }}</p>
+        {% if word.root_origin %}<p class="muted small">来源：{{ word.root_origin|origin_label }}</p>{% endif %}
+        {% if root_variants %}<p class="variants">变体：{{ root_variants|join(' · ') }}</p>{% endif %}
+        <a class="btn-ghost small" href="{{ url_for('main.words', exam=exam, root=word.root_id) }}">查看同词根单词</a>
+      </section>
+    {% endif %}
+
+    {% if siblings %}
+      <section class="side-card">
+        <h4>同词根串记</h4>
+        <ul class="sibling-list">
+          {% for s in siblings %}
+            <li>
+              <a href="{{ url_for('main.word_detail', wordid=s.wordid, exam=exam) }}">
+                <b>{{ s.spelling }}</b><span>{{ s.meaning[:18] }}</span>
+              </a>
+              <i class="dot dot-{{ s.status }}"></i>
+            </li>
+          {% endfor %}
+        </ul>
+      </section>
+    {% endif %}
+
+    {% if prev_id or next_id %}
+      <div class="side-nav">
+        {% if prev_id %}<a href="{{ url_for('main.word_detail', wordid=prev_id, exam=exam) }}" class="pill">← 上一个</a>{% endif %}
+        {% if next_id %}<a href="{{ url_for('main.word_detail', wordid=next_id, exam=exam) }}" class="pill">下一个 →</a>{% endif %}
+      </div>
+    {% endif %}
+  </aside>
+</article>
+
+{% endblock %}
