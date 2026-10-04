@@ -61,6 +61,8 @@ HTML_TEMPLATE = """<!DOCTYPE html>
   .az a {{ text-decoration:none; color:var(--ink); font-weight:700; font-size:13px;
            min-width:28px; text-align:center; padding:4px 6px; border-radius:7px; }}
   .az a:hover {{ background:var(--accent); color:#fff; }}
+  .az a i {{ font-style:normal; font-size:10px; font-weight:400;
+             opacity:.6; margin-left:2px; font-variant-numeric:tabular-nums; }}
   .ltr {{ display:flex; align-items:center; gap:8px; font-size:18px;
           margin:26px 0 10px; scroll-margin-top:64px; }}
   .ltr span {{ font-size:12px; color:var(--muted); font-weight:400; }}
@@ -171,7 +173,8 @@ def render_html(rows: list[dict], user: str, exam: str) -> str:
     order = sorted(groups, key=lambda k: (k == "#", k))
 
     az_bar = "\n".join(
-        f'    <a href="#ltr-{_anchor_of(k)}" title="{len(groups[k])} 词">{k}</a>'
+        f'    <a href="#ltr-{_anchor_of(k)}" title="{k}：{len(groups[k])} 词">'
+        f"{k}<i>{len(groups[k])}</i></a>"
         for k in order
     )
     sections = "\n".join(

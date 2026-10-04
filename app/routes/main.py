@@ -166,6 +166,14 @@ def words():
     rows, total, pages = queries.list_words(
         exam=exam, root=root, status=status, q=q, sort=sort, page=page, username=g.user
     )
+    # 严格匹配没结果时改用模糊匹配（容忍拼错），并在页面上标注来源
+    used_fuzzy = False
+    if q and total == 0:
+        rows, total, pages = queries.list_words(
+            exam=exam, root=root, status=status, q=q, sort=sort, page=1,
+            username=g.user, fuzzy=True,
+        )
+        used_fuzzy = total > 0
 
     current_root = queries.get_root(int(root)) if root not in ("all", "none") else None
     variants = queries.root_variants(int(root)) if current_root else []
@@ -183,6 +191,7 @@ def words():
         sort=sort,
         sort_filters=SORT_FILTERS,
         q=q,
+        fuzzy=used_fuzzy,
         page_size=PAGE_SIZE,
         root_tree=queries.roots_by_type(exam, g.user),
         **_common_context(exam),

@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+import difflib
 from typing import Any
 
 from ..config import PAGE_SIZE, SEARCH_PAGE_SIZE
@@ -154,13 +155,40 @@ def root_variants(root_id: int) -> list[str]:
 
 # ---------------------------------------------------------------- 单词
 
+def _fuzzy_wordids(q: str, exam: str, limit: int = 30) -> list[int]:
+    """模糊匹配：找出与输入拼写相近的单词 id（容忍拼错）。
+
+    仅对 ASCII 纯字母查询生效——中文/混合输入交给 LIKE 处理，近似匹配意义不大。
+    """
+    target = q.strip().lower()
+    if not (target.isascii() and target.isalpha()) or len(target) < 3:
+        return []
+
+    clause, params = _exam_clause(exam)
+    rows = query(f"SELECT wordid, spelling FROM words w WHERE 1=1 {clause}", params)
+    if not rows:
+        return []
+
+    by_spelling: dict[str, list[int]] = {}
+    for row in rows:
+        by_spelling.setdefault(str(row["spelling"]).lower(), []).append(int(row["wordid"]))
+
+    ids: list[int] = []
+    for match in difflib.get_close_matches(target, by_spelling.keys(), n=limit, cutoff=0.7):
+        ids.extend(by_spelling[match])
+    return ids[:limit]
+
+
 def _list_where(
     exam: str,
     root: str,
     status: str,
     q: str,
-) -> tuple[str, dict[str, Any]]:
+    fuzzy: bool = False,
+) -> tuple[str, dict[str, Any], list[int]]:
+    """返回 (条件, 参数, 模糊命中的 wordid)，第三个元素按相似度从高到低排列。"""
     clause, params = _exam_clause(exam)
+    fuzzy_ids: list[int] = []
 
     if root == "none":
         clause += " AND w.root_id IS NULL"
@@ -175,11 +203,25 @@ def _list_where(
         clause += " AND p.starred = 1"
 
     if q:
-        # 拼写用 LIKE；中文释义命中时同样支持
-        clause += " AND (LOWER(w.spelling) LIKE :q OR w.meaning LIKE :q)"
         params["q"] = f"%{q.lower()}%"
+        if fuzzy:
+            ids = _fuzzy_wordids(q, exam)
+            if ids:
+                placeholders = ", ".join(f":fid{i}" for i in range(len(ids)))
+                for i, wid in enumerate(ids):
+                    params[f"fid{i}"] = wid
+                fuzzy_ids = ids
+                clause += (
+                    " AND (LOWER(w.spelling) LIKE :q OR w.meaning LIKE :q"
+                    f" OR w.wordid IN ({placeholders}))"
+                )
+            else:
+                clause += " AND (LOWER(w.spelling) LIKE :q OR w.meaning LIKE :q)"
+        else:
+            # 拼写用 LIKE；中文释义命中时同样支持
+            clause += " AND (LOWER(w.spelling) LIKE :q OR w.meaning LIKE :q)"
 
-    return clause, params
+    return clause, params, fuzzy_ids
 
 
 def list_words(
@@ -191,8 +233,9 @@ def list_words(
     page: int = 1,
     page_size: int = PAGE_SIZE,
     username: str = "",
+    fuzzy: bool = False,
 ) -> tuple[list[dict[str, Any]], int, int]:
-    clause, params = _list_where(exam, root, status, q)
+    clause, params, fuzzy_ids = _list_where(exam, root, status, q, fuzzy)
     params = {**params, "username": username}
     total_row = query_one(
         f"""SELECT COUNT(*) AS c FROM words w
@@ -205,6 +248,14 @@ def list_words(
     page = max(1, min(page, pages))
 
     order = SORTS.get(sort, SORTS["word"])
+    if fuzzy_ids:
+        # 模糊匹配时把「最相近的词」排在前面：按 difflib 给出的相似度顺序，
+        # 其余结果仍按请求的排序规则，避免正确词被字母序埋到后面。
+        rank = "CASE w.wordid " + " ".join(
+            f"WHEN {wid} THEN {i}" for i, wid in enumerate(fuzzy_ids)
+        ) + f" ELSE {len(fuzzy_ids)} END"
+        order = f"{rank}, {order}"
+
     rows = query(
         f"""SELECT w.wordid, w.spelling, w.uk_phonetic, w.us_phonetic,
                    w.pos, w.meaning, w.example_count, w.frequency,
@@ -224,10 +275,11 @@ def list_words(
 
 
 def search_words(
-    q: str, exam: str = "all", page: int = 1, username: str = ""
+    q: str, exam: str = "all", page: int = 1, username: str = "", fuzzy: bool = False
 ) -> tuple[list[dict[str, Any]], int, int]:
     return list_words(
-        exam=exam, q=q, sort="word", page=page, page_size=SEARCH_PAGE_SIZE, username=username
+        exam=exam, q=q, sort="word", page=page, page_size=SEARCH_PAGE_SIZE,
+        username=username, fuzzy=fuzzy,
     )
 
 

@@ -43,6 +43,10 @@
   </div>
 </div>
 
+{% if fuzzy %}
+<p class="fuzzy-hint">没有精确匹配「{{ q }}」的单词，以下为拼写相近的结果</p>
+{% endif %}
+
 <div class="word-grid">
   {% for w in words %}
     <article class="word-card status-{{ w.status }}" data-wordid="{{ w.wordid }}">

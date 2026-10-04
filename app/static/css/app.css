@@ -113,6 +113,11 @@ h3 { font-size: 16px; }
 .nav-text-btn:hover { border-color: var(--accent); color: var(--accent); background: #EEF2FF; }
 .empty-actions { display: flex; gap: 10px; justify-content: center; }
 .empty-state .hint.error { color: #B91C1C; background: #FEE2E2; padding: 8px 12px; border-radius: 8px; }
+/* 模糊匹配结果提示 */
+.fuzzy-hint {
+  margin: 0 0 12px; font-size: 12px; color: #B45309;
+  background: #FEF3C7; border-radius: 10px; padding: 8px 12px;
+}
 
 .stat-chips { display: flex; gap: 6px; }
 .chip {
