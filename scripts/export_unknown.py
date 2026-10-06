@@ -75,6 +75,7 @@ HTML_TEMPLATE = """<!DOCTYPE html>
                 min-width:38px; font-variant-numeric:tabular-nums; }}
   .word {{ font-weight:700; font-size:16px; min-width:0; }}
   .ph {{ color:var(--muted); font-size:13px; }}
+  .collins {{ font-size:11px; color:#F59E0B; letter-spacing:1px; white-space:nowrap; }}
   .pos {{ color:var(--accent); font-size:12px; font-weight:600; }}
   .mean {{ color:var(--ink); font-size:14px; line-height:1.6; }}
   footer {{ margin-top:32px; color:var(--muted); font-size:12px; text-align:center; }}
@@ -102,7 +103,7 @@ HTML_TEMPLATE = """<!DOCTYPE html>
 </html>
 """
 
-ITEM_TEMPLATE = """    <li><span class="word">{word}</span>{phonetic}{pos}<span class="mean">{meaning}</span></li>"""
+ITEM_TEMPLATE = """    <li><span class="word">{word}</span>{collins}{phonetic}{pos}<span class="mean">{meaning}</span></li>"""
 
 SECTION_TEMPLATE = """<h2 class="ltr" id="ltr-{anchor}">{letter}<span>{count} 词</span><a class="top" href="#top">↑ 回到顶部</a></h2>
 <ol>
@@ -131,6 +132,14 @@ def _truncate_senses(text: str, senses: int) -> str:
     return "，".join(parts[:senses])
 
 
+def _stars_of(row: dict) -> str:
+    """柯林斯星级：只输出实心星（★★★），不补空心星。0 星返回空串。"""
+    star = int(row.get("collins_star") or 0)
+    if star <= 0:
+        return ""
+    return "★" * star
+
+
 def _phonetic_of(row: dict) -> str:
     """英音/美音合并显示；两者相同则只显示一次。"""
     uk = (row.get("uk_phonetic") or "").strip()
@@ -154,8 +163,10 @@ def _anchor_of(letter: str) -> str:
 
 
 def _render_item(row: dict) -> str:
+    stars = _stars_of(row)
     return ITEM_TEMPLATE.format(
         word=html.escape(_clean(row["spelling"])),
+        collins=f'<span class="collins">{stars}</span>' if stars else "",
         phonetic=_phonetic_of(row),
         pos=f'<span class="pos">{html.escape(_clean(row["pos"]))}</span>'
         if _clean(row.get("pos"))
@@ -206,7 +217,10 @@ def render_txt(rows: list[dict]) -> str:
         phonetic = "" if phonetic == "//" else phonetic
         # 词性本身已带句点（如 "vt."），不要再补一个
         pos = f"{_clean(row.get('pos'))} " if _clean(row.get("pos")) else ""
-        lines.append(f"{_clean(row['spelling'])}\t{phonetic}\t{pos}{_clean(row.get('meaning'))}")
+        word = _clean(row["spelling"])
+        stars = _stars_of(row)
+        head = f"{word} {stars}" if stars else word
+        lines.append(f"{head}\t{phonetic}\t{pos}{_clean(row.get('meaning'))}")
     return "\n".join(lines) + "\n"
 
 
@@ -249,6 +263,9 @@ def _render_pdf_line(row: dict, senses: int = 0) -> str:
         phonetic = f"/{uk or us}/" if (uk or us) else ""
 
     parts = [word]
+    stars = _stars_of(row)
+    if stars:
+        parts.append(stars)
     if phonetic:
         parts.append(html.escape(phonetic))
     pos = _clean(row.get("pos"))

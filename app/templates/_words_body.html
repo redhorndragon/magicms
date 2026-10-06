@@ -52,7 +52,12 @@
     <article class="word-card status-{{ w.status }}" data-wordid="{{ w.wordid }}">
       <div class="word-top">
         <a href="{{ url_for('main.word_detail', wordid=w.wordid, exam=exam) }}" class="word-spell">{{ w.spelling }}</a>
-        <button class="star-btn {{ 'on' if w.starred }}" data-star="{{ w.wordid }}" title="收藏">★</button>
+        <div class="word-top-right">
+          {% if w.collins_star %}
+            <span class="collins" title="柯林斯 {{ w.collins_star }} 星（按语料词频估算）">{{ w.collins_star|collins_stars }}</span>
+          {% endif %}
+          <button class="star-btn {{ 'on' if w.starred }}" data-star="{{ w.wordid }}" title="收藏">★</button>
+        </div>
       </div>
       <div class="phonetic">
         {% if w.uk_phonetic %}<span>英 <b>/{{ w.uk_phonetic }}/</b></span>{% endif %}

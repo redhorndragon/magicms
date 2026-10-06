@@ -6,7 +6,11 @@
   <div class="detail-main">
     <div class="detail-head">
       <div>
-        <h1 class="detail-spell">{{ word.spelling }}</h1>
+        <h1 class="detail-spell">{{ word.spelling }}
+          {% if word.collins_star %}
+            <span class="collins big" title="柯林斯 {{ word.collins_star }} 星（按语料词频估算）">{{ word.collins_star|collins_stars }}</span>
+          {% endif %}
+        </h1>
         <div class="phonetic big">
           {% if word.uk_phonetic %}<span>英 <b>/{{ word.uk_phonetic }}/</b></span>{% endif %}
           {% if word.us_phonetic %}<span>美 <b>/{{ word.us_phonetic }}/</b></span>{% endif %}

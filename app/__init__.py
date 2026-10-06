@@ -24,10 +24,11 @@ def create_app() -> Flask:
 
     # 把旧版 progress 表升级为按用户隔离的结构（已有进度归入第一个配置用户）
     if DB_PATH.exists():
-        from .db import ensure_user_schema
+        from .db import ensure_collins_column, ensure_user_schema
         from .users import default_user
 
         ensure_user_schema(default_user())
+        ensure_collins_column()
 
     @app.before_request
     def _bind_current_user() -> None:
@@ -75,6 +76,14 @@ def create_app() -> Flask:
         pattern = re.compile(rf"\b({base})(?:s|es|ed|d|ing|ment)?\b", re.IGNORECASE)
         # 必须在纯 str 上做替换：Markup 会把插入的标签再次转义
         return Markup(pattern.sub(r'<mark class="hl">\1</mark>', str(escaped)))
+
+    @app.template_filter("collins_stars")
+    def _collins_stars(value: int) -> str:
+        """把星级渲染成实心星（★★★）；不显示空心星。0 星（未标注）返回空串。"""
+        star = int(value or 0)
+        if star <= 0:
+            return ""
+        return "★" * star
 
     @app.template_filter("origin_label")
     def _origin_label(value: str) -> str:

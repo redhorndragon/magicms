@@ -36,7 +36,8 @@ CREATE TABLE IF NOT EXISTS words (
     frequency     REAL    NOT NULL DEFAULT 0,
     root_id       INTEGER REFERENCES roots(id) ON DELETE SET NULL,
     root_source   TEXT    NOT NULL DEFAULT 'none',   -- auto | manual | none
-    example_count INTEGER NOT NULL DEFAULT 0
+    example_count INTEGER NOT NULL DEFAULT 0,
+    collins_star  INTEGER NOT NULL DEFAULT 0         -- 柯林斯星级 1-5（按语料词频分档，0=未标注）
 );
 
 CREATE TABLE IF NOT EXISTS examples (
@@ -112,6 +113,17 @@ def init_schema(drop: bool = False) -> None:
             ):
                 conn.execute(f"DROP TABLE IF EXISTS {table}")
         conn.executescript(SCHEMA)
+
+
+def ensure_collins_column() -> None:
+    """给已有库补上柯林斯星级列（新建库时 SCHEMA 已包含该列）。
+
+    星级由 scripts/build_collins.py 依据全语料词频分档写入。
+    """
+    with sqlite3.connect(str(DB_PATH)) as conn:
+        cols = [row[1] for row in conn.execute("PRAGMA table_info(words)")]
+        if "collins_star" not in cols:
+            conn.execute("ALTER TABLE words ADD COLUMN collins_star INTEGER NOT NULL DEFAULT 0")
 
 
 def _table_has_column(conn: sqlite3.Connection, table: str, column: str) -> bool:

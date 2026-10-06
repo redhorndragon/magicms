@@ -258,7 +258,7 @@ def list_words(
 
     rows = query(
         f"""SELECT w.wordid, w.spelling, w.uk_phonetic, w.us_phonetic,
-                   w.pos, w.meaning, w.example_count, w.frequency,
+                   w.pos, w.meaning, w.example_count, w.frequency, w.collins_star,
                    w.root_id, w.root_source,
                    r.root AS root_name, r.meaning AS root_meaning, r.type AS root_type,
                    COALESCE(p.status,'unknown') AS status,
@@ -355,7 +355,7 @@ def review_words(exam: str = "all", limit: int = 40, username: str = "") -> list
     clause, params = _exam_clause(exam)
     return query(
         f"""SELECT w.wordid, w.spelling, w.uk_phonetic, w.us_phonetic,
-                   w.pos, w.meaning, w.example_count,
+                   w.pos, w.meaning, w.example_count, w.collins_star,
                    r.root AS root_name, r.meaning AS root_meaning,
                    COALESCE(p.status,'unknown') AS status,
                    COALESCE(p.starred,0) AS starred
